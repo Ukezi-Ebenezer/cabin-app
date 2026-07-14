@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  :root {
+    --background: #070B1B;
+    --foreground: #FFFFFF;
+
+    --card: #11152B;
+    --popover: #11152B;
+
+    --primary: #6C3BFF;
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #1A1F3C;
+    --secondary-foreground: #B5B8C7;
+
+    --muted: #1A1F3C;
+    --muted-foreground: #B5B8C7;
+
+    --accent: #1A1F3C;
+    --accent-foreground: #FFFFFF;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 226 24% 18%;
+    --input: 226 24% 18%;
+    --ring: 257 100% 62%;
+
+    --success: #20C76F;
+    --secondary-text: #B5B8C7;
+
+    --radius: 1.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[hsl(var(--border))];
+  }
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-balance;
+  }
+  
+  h1 { @apply text-5xl md:text-7xl; }
+  h2 { @apply text-4xl md:text-5xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  p { @apply text-base md:text-lg text-[var(--secondary-text)]; }
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 20px rgba(108, 59, 255, 0.5);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
